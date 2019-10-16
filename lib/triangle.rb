@@ -25,7 +25,7 @@ class Triangle
       # end
     end
     
-    if (@side1 + @side2) > @side3 || (@side2 + @side3) > @side1 || (@side3 + @side1) > @side2
+    unless (@side1 + @side2) > @side3 || (@side2 + @side3) > @side1 || (@side3 + @side1) > @side2
       # begin
         raise TriangleError
       # rescue TriangleError => error
