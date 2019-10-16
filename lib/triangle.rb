@@ -4,9 +4,9 @@ class Triangle
   attr_reader :side1, :side2, :side3
   
   class TriangleError < StandardError
-    def message
+    # def message
       "Invalid Triangle!"
-    end
+    # end
   end
 
 
