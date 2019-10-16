@@ -19,7 +19,7 @@ class Triangle
       #   raise TriangleError
       # rescue TriangleError => error
       #     puts error.message
-    end
+    #end
   end
     
   # class TriangleError < StandardError
