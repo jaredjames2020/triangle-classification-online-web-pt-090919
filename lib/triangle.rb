@@ -25,8 +25,8 @@ class Triangle
       # end
     end
     
-    if (@side1 + @side3) < @side2 || (@side1 + @side2) < @side3 || (@side2 + @side3) < @side1
-      # begin
+    if (@side1 + @side2) > @side3 || (@side2 + @side3) > @side1 || (@side3 + @side1) < @side1
+      # begin  a+b>c,\quad b+c>a,\quad c+a>b.
         raise TriangleError
       # rescue TriangleError => error
       #     puts error.message
