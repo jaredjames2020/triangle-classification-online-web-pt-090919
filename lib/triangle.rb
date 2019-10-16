@@ -15,7 +15,7 @@ class Triangle
     elsif @side1 != @side3 || @side1 != @side2 || @side2 != @side3
       :scalene
     elsif (@side1 + @side3) < @side2 || (@side1 + @side2) < @side3 || (@side2 + @side3) < @side1
-      raise 
+      raise TriangleError
     end
     
     class TriangleError < StandardError
