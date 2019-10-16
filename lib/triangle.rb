@@ -27,5 +27,5 @@ class Triangle
       "Invalid Triangle!"
     end
   end
-end
+  
 end
