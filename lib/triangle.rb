@@ -25,6 +25,13 @@ class Triangle
       end
     end
     
+    if (@side1 + @side3) < @side2 || (@side1 + @side2) < @side3 || (@side2 + @side3) < @side1
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message
+      end
+    end  
     
     if @side1 == @side2 && @side2 == @side3
       :equilateral
@@ -34,13 +41,6 @@ class Triangle
       :scalene
     end
     
-    if (@side1 + @side3) < @side2 || (@side1 + @side2) < @side3 || (@side2 + @side3) < @side1
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-          puts error.message
-      end
-    end  
     
   end
   
