@@ -2,6 +2,9 @@ class Triangle
   # write code here
   
   class TriangleError < StandardError
+    if @side1 == 0 && @side2 == 0 && @side3 == 0
+            
+    
     def message
       "Invalid Triangle!"
     end
