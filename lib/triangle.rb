@@ -7,6 +7,12 @@ class Triangle
     @side3 = side3
   end
   
+  class TriangleError < StandardError
+    def message
+      "Invalid Triangle!"
+    end
+  end
+  
   def kind
     if @side1 == @side2 && @side2 == @side3
       :equilateral
@@ -15,17 +21,12 @@ class Triangle
     elsif @side1 != @side3 || @side1 != @side2 || @side2 != @side3
       :scalene
     elsif (@side1 + @side3) < @side2 || (@side1 + @side2) < @side3 || (@side2 + @side3) < @side1
-      # begin
-      #   raise TriangleError
-      # rescue TriangleError => error
-      #     puts error.message
-    #end
-  end
-    
-  class TriangleError < StandardError
-    def message
-      "Invalid Triangle!"
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message
     end
   end
+    
 end
 end
