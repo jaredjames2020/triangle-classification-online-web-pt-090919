@@ -1,7 +1,7 @@
 class Triangle
   # write code here
   
-  attr_reader :side1, :side2, :side3
+  #attr_reader :side1, :side2, :side3
   
   class TriangleError < StandardError
     # def message
@@ -16,6 +16,7 @@ class Triangle
     @side3 = side3
   end
   
+
   def kind
     if @side1 <= 0 || @side2 <= 0 || @side3 <= 0
       # begin
